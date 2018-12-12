@@ -43,7 +43,8 @@ public class SymbolConvert {
 								String lineN = null;
 								while(!line.equals(lineN)) {
 									lineN=line;
-									line = line.replace("(\".*),(.*\")", "$1;$2");
+									//line = line.replace("(\".*),(.*\")", "$1;$2");
+									line = line.replace("(\"[^\"]+),([^\"]+\")", "$1;$2");
 								}
 								
 								bw.write(line.toString());
